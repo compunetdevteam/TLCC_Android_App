@@ -23,7 +23,7 @@ public class HomeScreen extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
+//For the toggle 
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(nToggle.onOptionsItemSelected(item)){
