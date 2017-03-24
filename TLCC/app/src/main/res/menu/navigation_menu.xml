@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_signIn"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="My Account"/>
+    <item android:id="@+id/nav_pastor_profile"
+          android:icon="@mipmap/ic_person_pin_black_24dp"
+          android:title="Pastor Profile"/>
+    <item android:id="@+id/nav_sermons"
+        android:icon="@mipmap/ic_play_circle_filled_black_24dp"
+        android:title="Sermons"/>
+    <item android:id="@+id/nav_gallery"
+          android:icon="@mipmap/ic_perm_media_black_24dp"
+          android:title="Picture Gallery"/>
+    <item android:id="@+id/nav_store"
+        android:icon="@mipmap/ic_local_grocery_store_black_24dp"
+        android:title="Store"/>
+    <item android:id="@+id/nav_ePayment"
+        android:icon="@mipmap/ic_redeem_black_24dp"
+        android:title="Give"/>
+    <item android:id="@+id/nav_liveStream"
+        android:icon="@mipmap/ic_live_tv_black_24dp"
+        android:title="Stream Service"/>
+    <item android:id="@+id/nav_prayHands"
+          android:icon="@mipmap/prayer"
+          android:title="Prayer Request"/>
+    <item android:id="@+id/nav_houseFellowship"
+        android:icon="@mipmap/ic_home_black_24dp"
+        android:title="Fellowship Center"/>
+    <item android:id="@+id/nav_downloads"
+        android:icon="@mipmap/ic_get_app_black_24dp"
+        android:title="My Downloads"/>
+    <item android:id="@+id/nav_contact"
+        android:icon="@mipmap/ic_contacts_black_24dp"
+        android:title="Contact"/>
+    <item android:id="@+id/nav_settings"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Settings"/>
+    <item android:id="@+id/nav_signOut"
+        android:icon="@mipmap/ic_exit_to_app_black_24dp"
+        android:title="Log Out"/>
+</menu>
