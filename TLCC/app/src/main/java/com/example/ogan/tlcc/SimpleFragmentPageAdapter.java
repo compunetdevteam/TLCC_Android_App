@@ -10,9 +10,9 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 
 public class SimpleFragmentPageAdapter extends FragmentPagerAdapter {
-    private  String[] tabtitle = new String[] {"tab_1", "tab_2", "tab_3", "tab_4", "tab_5"};
+    private  String[] tabtitle = new String[] {"Blog", "Media", "Events", "Chat"};
     Context context;
-    private int pageCount = 5;
+    private int pageCount = 4;
 
     public SimpleFragmentPageAdapter(FragmentManager fm, Context context) {
         super(fm);

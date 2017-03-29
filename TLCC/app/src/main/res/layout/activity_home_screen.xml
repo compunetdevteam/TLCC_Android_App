@@ -13,8 +13,10 @@
     android:orientation="vertical"
     tools:context="com.example.ogan.tlcc.HomeScreen">
 
-    <include layout="@layout/toolbar_main"
-        android:id="@+id/app_bar"/>
+    <include
+        android:id="@+id/app_bar"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        layout="@layout/toolbar_main" />
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -25,8 +27,11 @@
             android:background="@color/colorPrimary"
             app:tabMode="scrollable"
             app:tabGravity="center"
+            app:tabContentStart="30dp"
             android:layout_below="@id/app_bar"
-            app:tabIndicatorColor="#008000">
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabTextColor="#ffffff"
+            app:tabSelectedTextColor="#00bfff">
 
 
         </android.support.design.widget.TabLayout>
@@ -50,13 +55,14 @@
 
 
 
-
     </LinearLayout>
 <android.support.design.widget.NavigationView
 android:layout_width="wrap_content"
 android:layout_height="match_parent"
 app:menu="@menu/navigation_menu"
 android:layout_gravity="start"
-android:background="#008000">
+android:background="#ffff"
+    app:headerLayout="@layout/nav_header"
+    android:id="@+id/nav_view">
 </android.support.design.widget.NavigationView>
     </android.support.v4.widget.DrawerLayout>
