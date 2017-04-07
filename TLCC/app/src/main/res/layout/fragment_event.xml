@@ -1,0 +1,33 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ogan.tlcc.EventFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000800">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textSize="40dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/eve"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/eve"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/events"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

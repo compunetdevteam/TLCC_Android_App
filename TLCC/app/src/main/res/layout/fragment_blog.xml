@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.BlogFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000800">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/head"
+                android:text="Welcome to our blog"
+                android:textAllCaps="true"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="You get live updates here"
+                android:layout_below="@+id/head"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:id="@+id/con"
+                android:textColor="#ffff"/>
+           <!-- <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/pray"
+                android:layout_height="100dp"
+                android:layout_below="@+id/con"
+                android:src="@drawable/home2"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/pray"
+                android:src="@drawable/thanksgiving"
+                android:layout_marginTop="20dp"/>-->
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

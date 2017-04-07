@@ -3,14 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ogan.tlcc.PastorFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        android:gravity="center"
-        android:textSize="35dp"
-        android:textStyle="bold"/>
+        android:background="#000800">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/pst_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="The Senior Pastors"
+            android:textSize="20dp"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/pst_header"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/mbaya"
+            android:id="@+id/pst_mbaya"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pst_mbaya"
+            android:id="@+id/mbaya_txt"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Pastor Jemimah Mbaya is the lead visionary of The Latterhouse Christian Centre. She is an internationally renowned teacher and preacher of the balanced and unbiased Word of God with an unquenchable and insatiable passion for men and women to come into their Kingly and Priestly authority in God. She is also an Author, Business Consultant, Conference Speaker and a Prolific Music minister with several albums.
+Pastor Jemimah Mbaya is a graduate of Mass Communication from the University of Maiduguri and is blissfully married to Dr Albert Mbaya."/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pst_hus"
+            android:layout_below="@+id/mbaya_txt"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@id/pst_hus"
+            android:text="Dr Albert W. Mbaya is a teacher of the word of God with a passion for preaching the word of faith particularly in the area of healing. He is an Associate Professor with the Department of Microbiology and Parasitological at the University of Maiduguri.  Their marriage of over 2 decades has been blessed with four wonderful children- Pst ( Mrs) Stephanie Bigwan, Joshua, Sharon and Jesse and two grandchildren – Jotham and Ashira ."/>
+
+    </RelativeLayout>
+    </ScrollView>
+
 
 </FrameLayout>
