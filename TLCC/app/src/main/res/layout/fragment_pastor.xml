@@ -3,10 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.ogan.tlcc.PastorFragment">
+
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000800">
+
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout

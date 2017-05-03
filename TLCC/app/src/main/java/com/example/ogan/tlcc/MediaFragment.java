@@ -2,23 +2,21 @@ package com.example.ogan.tlcc;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.VideoView;
 
+import com.example.ogan.tlcc.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class MediaFragment extends Fragment {
 
 
-
-    public HomeFragment() {
+    public MediaFragment() {
         // Required empty public constructor
     }
 
@@ -27,10 +25,12 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
 
+        View v= inflater.inflate(R.layout.fragment_media, container, false);
+        /*VideoView videoView = (VideoView) v.findViewById(R.id.view11);
+        videoView.setVideoPath("/home/ogan/Desktop/TLCC/app/src/main/res/drawable/barca.mp4");
+        videoView.start();*/
+        return v;
     }
-
-
 
 }

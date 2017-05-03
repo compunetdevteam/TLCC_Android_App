@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary"
     app:title="TLCC"
+    app:layout_collapseMode="none"
     app:titleTextColor="@android:color/background_light">
 
 </android.support.v7.widget.Toolbar>

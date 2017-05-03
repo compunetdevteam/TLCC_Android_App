@@ -1,12 +1,11 @@
 package com.example.ogan.tlcc;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,12 +13,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.FrameLayout;
-import android.widget.Toast;
-
-
-
 
 public class HomeScreen extends AppCompatActivity {
 
@@ -57,9 +50,10 @@ public class HomeScreen extends AppCompatActivity {
                 if(item.getItemId()==R.id.nav_pastor_profile){
                     FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
                     fragmentTransaction1.replace(R.id.containerView, new PastorFragment()).commit();
-                    getSupportActionBar().setTitle("Pastor Profile");
-                    item.setChecked(true);
+                    toolbar.setTitle("Pastor Profile");
                     fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
                 }
 
                 return false;
@@ -73,10 +67,42 @@ public class HomeScreen extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+                if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                    getSupportActionBar().setDisplayHomeAsUpEnabled(true); // show back button
+                    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            onBackPressed();
+                        }
+                    });
+                } else {
+                    //show hamburger
+                    nToggle.setDrawerIndicatorEnabled(true); //making the toggle come back
+                    nDrawLayout.addDrawerListener(nToggle);
+                    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                    toolbar.setTitle("TLCC");
+                    nToggle.syncState();
+                    toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            nDrawLayout.openDrawer(GravityCompat.START);
+                        }
+                    });
+                }
+            }
+        });
+
 
     }
-//For the toggle
-     @Override
+
+
+
+
+    //For the toggle
+    @Override
     public boolean onOptionsItemSelected(MenuItem item){
 
         if(nToggle.onOptionsItemSelected(item)){
@@ -84,16 +110,7 @@ public class HomeScreen extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    @Override
-    public void onBackPressed(){
-        if(getFragmentManager().getBackStackEntryCount() > 0){
-            getFragmentManager().popBackStack();
 
-        } else {
-            super.onBackPressed();
-            getSupportActionBar().setTitle("TLCC");
-        }
-    }
 
 
 }

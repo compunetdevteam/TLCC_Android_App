@@ -4,9 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import layout.BlogFragment;
-import layout.MediaFragment;
-
 import static com.example.ogan.tlcc.TabFragment.int_items;
 
 /**
