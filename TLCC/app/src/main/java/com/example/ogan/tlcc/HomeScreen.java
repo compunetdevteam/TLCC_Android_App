@@ -46,14 +46,94 @@ public class HomeScreen extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 nDrawLayout.closeDrawers();
 
-
-                if(item.getItemId()==R.id.nav_pastor_profile){
+//for the individual menus
+                if(item.getItemId()==R.id.nav_signIn){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new MyAccount()).commit();
+                    toolbar.setTitle("My Account");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_pastor_profile){
                     FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
                     fragmentTransaction1.replace(R.id.containerView, new PastorFragment()).commit();
                     toolbar.setTitle("Pastor Profile");
                     fragmentTransaction1.addToBackStack(null);
                     nToggle.setDrawerIndicatorEnabled(false);
-                    nToggle.setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_sermons){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new Sermons()).commit();
+                    toolbar.setTitle("Sermons");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_gallery){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new Gallery()).commit();
+                    toolbar.setTitle("Gallery");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_store){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new Store()).commit();
+                    toolbar.setTitle("Store");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_ePayment){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new Give()).commit();
+                    toolbar.setTitle("Give");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_liveStream){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new StreamService()).commit();
+                    toolbar.setTitle("Live Service");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_prayHands){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new PrayerRequest()).commit();
+                    toolbar.setTitle("Prayer Request");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_houseFellowship){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new FellowshipCenter()).commit();
+                    toolbar.setTitle("Fellowship Centers");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_downloads){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new Downloads()).commit();
+                    toolbar.setTitle("My Downloads");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
+                }
+                else if(item.getItemId()==R.id.nav_facebook){
+                    FragmentTransaction fragmentTransaction1 = FM.beginTransaction();
+                    fragmentTransaction1.replace(R.id.containerView, new FacebookFragment()).commit();
+                    toolbar.setTitle("Facebook");
+                    fragmentTransaction1.addToBackStack(null);
+                    nToggle.setDrawerIndicatorEnabled(false);
+                    nToggle.setHomeAsUpIndicator(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
                 }
 
                 return false;
@@ -67,6 +147,7 @@ public class HomeScreen extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //getting the fragment return to home page
         getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
             @Override
             public void onBackStackChanged() {

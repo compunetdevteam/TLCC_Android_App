@@ -2,84 +2,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000800"
     tools:context="com.example.ogan.tlcc.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000800"
         android:id="@+id/scroll">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000800">
+        android:orientation="vertical">
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@mipmap/logo"
             android:id="@+id/logo"
-            android:layout_centerHorizontal="true"/>
+            android:layout_gravity="center"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/welcome"
-            android:src="@drawable/home"
-            android:layout_below="@+id/logo"
-            android:layout_centerHorizontal="true"/>
+            android:src="@drawable/home"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:id="@+id/opening"
-            android:src="@drawable/praypic"
-            android:layout_below="@+id/welcome"/>
+            android:layout_marginTop="10dp"
+            android:src="@drawable/praypic"/>
         <!--<ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginTop="10dp"
             android:id="@+id/oppray"
-            android:src="@drawable/oppray"
-            android:layout_below="@id/opening"/>
+            android:src="@drawable/oppray"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_marginTop="10dp"
             android:id="@+id/worshp2"
-            android:src="@drawable/worship2"
-            android:layout_below="@+id/oppray"/>-->
+            android:src="@drawable/worship2"/>-->
 
 
 
-    </RelativeLayout>
-    </ScrollView>
-    <LinearLayout
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--<LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="bottom"
-        >
+        android:layout_gravity="bottom|center">
 
-        <Button
+       <Button
             android:id="@+id/media"
-            android:layout_marginLeft="10dp"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_gravity="bottom"
+            android:padding="5dp"
+            android:layout_marginRight="20dp"
             android:background="@color/colorPrimary"
             android:textColor="#ffffff"
-            android:text="Click to watch our videos" />
+            android:text="Watch our videos" />
 
         <Button
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_gravity="bottom"
             android:textColor="#ffffff"
-            android:layout_marginLeft="55dp"
-            android:layout_marginRight="0dp"
+            android:padding="5dp"
+            android:layout_marginLeft="20dp"
             android:background="@color/colorPrimary"
-            android:text="Click For Prayer Requests" />
+            android:text="Prayer Requests" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
 
 </FrameLayout>
